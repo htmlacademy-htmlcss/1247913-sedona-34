@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
   <header class="header">
-    <a class="header__logolink"><img class="header__logo" src="./images/sedona-logo.svg" width="139" height="70"
+    <a class="header__logo-link"><img class="header__logo" src="./images/sedona-logo.svg" width="139" height="70"
         alt="Логотип City of Sedona"></a>
     <nav class="header__nav">
       <ul class="header__nav-list">
@@ -27,7 +28,7 @@
           <a href="#" class="header__nav-link"><span class="visually-hidden">Поиск по сайту</span></a>
         </li>
         <li class="header__nav-item">
-          <a href="#" class="header__navlink"><span class="visually-hidden">Отметки нравится</span></a>
+          <a href="#" class="header__nav-link"><span class="visually-hidden">Отметки нравится</span></a>
         </li>
         <li class="header__nav-item">
           <a href="#search" class="button header__nav-link">Хочу сюда!</a>
@@ -38,7 +39,7 @@
   <main class="main">
     <img class="main__logo" src="./images/welcome.svg" width="458" height="352"
       alt="Картинка со слоганом - Welcome to the gorgeous - SEDONA - Because the Grand Canyon sucks!">
-    <h1 class="main__slogan">
+    <h1 class="main__title">
       Седона — небольшой городок в Аризоне, заслуживающий большего!
     </h1>
     <section class="advantages">
@@ -48,11 +49,11 @@
       <ol class="advantages__list">
         <li class="advantages__item">
           <div class="advantages__card advantages__card_darkblue">
-            <h3 class="advantages__card-title advantages__card-title_main">
+            <h3 class="advantages__card-title">
               Настоящий городок
             </h3>
             <p class="advantages__card-number">№1</p>
-            <p class="advantages__card-descr advantages__card-descr_main">
+            <p class="advantages__card-descr">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </p>
           </div>
@@ -61,7 +62,7 @@
           </div>
           <div class="advantages__card advantages__card_lightblue">
             <div class="advantages__card-icon_house">
-              <span class="visualy-hidden">Иконка домика</span>
+              <span class="visually-hidden">Иконка домика</span>
             </div>
             <h4 class="advantages__card-title">Жильё</h4>
             <p class="advantages__card-descr">
@@ -70,17 +71,16 @@
           </div>
           <div class="advantages__card advantages__card_white">
             <div class="advantages__cardicon_burger">
-              <span class="visualy-hidden">Иконка бургера</span>
+              <span class="visually-hidden">Иконка бургера</span>
             </div>
             <h4 class="advantages__card-title">Еда</h4>
             <p class="advantages__card-descr">
-              Всегда заказывайте топовый фирменный бургер, вы не
-              разочаруетесь!
+              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </div>
           <div class="advantages__card advantages__card_lightblue">
             <div class="advantages__cardicon_present">
-              <span class="visualy-hidden">Иконка подарка</span>
+              <span class="visually-hidden">Иконка подарка</span>
             </div>
             <h4 class="advantages__card-title">Сувениры</h4>
             <p class="advantages__card-descr">
@@ -91,17 +91,17 @@
         <li class="advantages__item">
           <img class="advantages__card-img" src="./images/photo-2.jpg" alt="Фотография гор - мост дьявола">
           <div class="advantages__card advantages__card_darkblue">
-            <h3 class="advantages__card-title advantages__card-title_main">
+            <h3 class="advantages__card-title">
               Там есть мост дьявола
             </h3>
             <p class="advantages__card-number">№2</p>
-            <p class="advantages__card-descr advantages__card-descr_main">
+            <p class="advantages__card-descr">
               Да, по нему можно пройти! Если вы осмелитесь, разумеется
             </p>
           </div>
         </li>
         <li class="advantages__card advantages__card_lightblue">
-          <h3 class="advantages__card-title advantages__card-title">
+          <h3 class="advantages__card-title">
             Небольшая площадь
           </h3>
           <p class="advantages__card-number">№3</p>
@@ -110,7 +110,7 @@
           </p>
         </li>
         <li class="advantages__card advantages__card_blue">
-          <h3 class="advantages__card-title advantages__card-title">
+          <h3 class="advantages__card-title">
             Красивая дорога
           </h3>
           <p class="advantages__card-number">№4</p>
@@ -156,26 +156,30 @@
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__vk" href="#">
-            <span class="visualy-hidden">иконка вконтакте</span></a>
+            <img src="./images/icons/vk-social.svg" alt="иконка вконтакте">
+          </a>
         </li>
         <li class="social__item">
           <a class="social__link social__telegram" href="#">
-            <span class="visualy-hidden">иконка телеграм</span></a>
+            <img src="./images/icons/tg-social.svg" alt="иконка телеграм">
         </li>
         <li class="social__item">
           <a class="social__link social__youtube" href="#">
-            <span class="visualy-hidden">иконка youtube</span></a>
+            <img src="./images/icons/youtube-social.svg" alt="иконка youtube">
+          </a>
         </li>
       </ul>
     </section>
     <section class="telephone">
       <h2 class="visually-hidden">Телефон для связи</h2>
-      <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="telephone__link" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </section>
     <section class="footer-logo">
       <h2 class="visually-hidden">Логотип HTMLacademy</h2>
-      <a class="footer-logo__link" href="https://htmlacademy.ru/"><img class="footer-logo__img" src="./images/logo-htmlacademy.svg" width="115" height="34" alt="Логотип htmlacademy"></a>
+      <a class="footer-logo__link" href="https://htmlacademy.ru/"><img class="footer-logo__img"
+          src="./images/logo-htmlacademy.svg" width="115" height="34" alt="Логотип htmlacademy"></a>
     </section>
   </footer>
 </body>
+
 </html>
