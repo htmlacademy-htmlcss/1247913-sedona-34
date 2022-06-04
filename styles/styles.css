@@ -41,11 +41,11 @@ body {
 .button {
   outline: 0;
   border: 0;
+  font-family: inherit;
 }
 
 .button_search {
   display: block;
-  background: #756157;
   border-radius: 4px;
   padding: 12px 0;
   width: 547px;
@@ -64,7 +64,6 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   color: #FFFFFF;
-  background: #82B3D3;
   border-radius: 0px 10px 10px 0px;
   padding: 12px 15px;
   border: 1px solid #82B3D3;
@@ -81,15 +80,15 @@ body {
   text-decoration: none;
 }
 
-.button_brown {
+.button_detail {
   background-color: #756157;
 }
 
-.button_green {
+.button_success {
   background-color: #7DB54F;
 }
 
-.button_blue {
+.button_info {
   background-color: #82B3D3;
 }
 
@@ -123,7 +122,6 @@ body {
 }
 
 .main__title {
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -167,7 +165,6 @@ body {
 }
 
 .advantages__card-title {
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
@@ -195,7 +192,6 @@ body {
 }
 
 .search__title {
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -214,25 +210,32 @@ body {
 
 .subscription {
   background-image: url("../images/decorative/subscribe-background.jpg");
+  background-color: #000000;
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 94px 0;
   text-align: center;
+  color: #FFFFFF;
+}
+
+.subscription__hotels {
+  color: #000000;
+  background-image: none;
+  background-color: #FFFFFF;
 }
 
 .subscription__title {
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: inherit;
   margin-bottom: 29px;
 }
 
 .subscription__descr {
   font-size: 22px;
   line-height: 26px;
-  color: #FFFFFF;
+  color: inherit;
   margin: 0 auto;
   margin-bottom: 46px;
   width: 475px;
@@ -242,9 +245,10 @@ body {
   font-size: 0;
 }
 
-.subscription__form input {
+.subscription__form-input {
+  font-family: inherit;
   font-size: 18px;
-  padding: 20px 22px;
+  padding: 18px 22px;
   width: 600px;
   text-align: left;
   background: #F2F2F2;
@@ -294,7 +298,6 @@ body {
 }
 
 .hotels__options-title {
-  font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   color: #FFFFFF;
@@ -310,7 +313,6 @@ body {
 }
 
 .hotels__founded-title {
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -325,7 +327,6 @@ body {
 }
 
 .hotels__founded-card-title {
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
 }
@@ -334,7 +335,7 @@ body {
   text-decoration: none;
 }
 
-.hotels__founded-card-raiting {
+.hotels__founded-card-rating {
   display: inline-block;
   font-size: 16px;
   line-height: 20px;
@@ -343,4 +344,8 @@ body {
   padding: 9px 22px 8px 23px;
   background-color: #F2F2F2;
   border-radius: 4px;
+}
+
+.hotels__pagination-select {
+  font-family: inherit;
 }
