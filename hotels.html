@@ -7,23 +7,23 @@
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<body>
+<body class="container">
   <header class="header">
-    <a class="header__logo-link" href="index.html"><img src="./images/sedona-logo.svg" width="139" height="70"
-        alt="Логотип City of Sedona" class="header__logo"></a>
+    <a href="./index.html" class="header__logo-link"><img class="header__logo" src="./images/sedona-logo.svg"
+        width="139" height="70" alt="Логотип City of Sedona"></a>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="index.html" class="header__nav-link">Главная</a>
+          <a href="./index.html" class="header__nav-link header__nav-link_current">Главная</a>
         </li>
         <li class="header__nav-item">
           <a href="#" class="header__nav-link">О Седоне</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link header__nav-link_current">Гостинницы</a>
+          <a class="header__nav-link">Гостинницы</a>
         </li>
       </ul>
-      <ul class="header__nav-list header__nav-item_service">
+      <ul class="header__nav-list header__nav-service">
         <li class="header__nav-item">
           <a href="#" class="header__nav-link"><span class="visually-hidden">Поиск по сайту</span></a>
         </li>
@@ -31,7 +31,7 @@
           <a href="#" class="header__nav-link"><span class="visually-hidden">Отметки нравится</span></a>
         </li>
         <li class="header__nav-item">
-          <a href="index.html#search" class="button header__nav-link">Хочу сюда!</a>
+          <a href="#search" class="button header__nav-link">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -86,40 +86,45 @@
               Апартаменты
             </label>
           </fieldset>
-          <button type="submit" class="button button_info hotels__options-form-apply">
-            Применить
-          </button>
-          <button type="reset" class="button button_info hotels__options-form-reset">
-            Сбросить
-          </button>
+          <div class="hotels__options-form-buttons-wrapper">
+            <button type="submit" class="button button_info hotels__options-form-apply">
+              Применить
+            </button>
+            <button type="reset" class="button hotels__options-form-reset">
+              Сбросить
+            </button>
+          </div>
+
         </form>
       </section>
     </header>
     <section class="hotels__founded">
-      <h2 class="hotels__founded-title">Найдено гостиниц: 38</h2>
-      <select class="hotels__founded-select" aria-label="Сортировка">
-        <option value="cheap">Сначала дешёвые</option>
-        <option value="expensive">Сначала дорогие</option>
-        <option value="popular">Сначала популярные</option>
-      </select>
+      <header class="hotels__founded-header">
+        <h2 class="hotels__founded-title">Найдено гостиниц: 38</h2>
+        <select class="hotels__founded-select" aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="popular">Сначала популярные</option>
+        </select>
 
-      <ul class="hotels__sorting-buttons">
-        <li class="hotels__sorting-button">
-          <a href="#" class="hotels__founded-button">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-        </li>
-        <li class="hotels__sorting-button">
-          <a href="#" class="hotels__founded-button">
-            <span class="visually-hidden">Показать карточку</span>
-          </a>
-        </li>
-        <li class="hotels__sorting-button">
-          <a href="#" class="hotels__founded-button">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="hotels__sorting-buttons">
+          <li class="hotels__sorting-button">
+            <a href="#" class="hotels__founded-button">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </li>
+          <li class="hotels__sorting-button">
+            <a href="#" class="hotels__founded-button">
+              <span class="visually-hidden">Показать карточку</span>
+            </a>
+          </li>
+          <li class="hotels__sorting-button">
+            <a href="#" class="hotels__founded-button">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </li>
+        </ul>
+      </header>
       <ul class="hotels__founded-cards">
         <li class="hotels__founded-card">
           <img class="hotels__founded-card-img" src="./images/hotel-1.jpg" width="300" height="211"
@@ -202,32 +207,34 @@
           </div>
         </li>
       </ul>
-      <ul class="hotels__pagination">
-        <li class="hotels__pagination-item">
-          <a href="#" class="hotels__paginations-link hotels__paginations-link_current">1</a>
-        </li>
-        <li class="hotels__pagination-item">
-          <a href="#" class="hotels__paginations-link">2</a>
-        </li>
-        <li class="hotels__pagination-item">
-          <a href="#" class="hotels__paginations-link">3</a>
-        </li>
-        <li class="hotels__pagination-item">
-          <a href="#" class="hotels__paginations-link">4</a>
-        </li>
-        <li class="hotels__pagination-item">
-          <a href="#" class="hotels__paginations-link">...</a>
-        </li>
-        <li class="hotels__pagination-item">
-          <a href="#" class="hotels__paginations-link">10</a>
-        </li>
-      </ul>
-      <p class="hotels__pagination-title">Гостиниц на странице:</p>
-      <select class="hotels__pagination-select" aria-label="Количество гостиниц на странице">
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
+      <footer class="hotels__founded-footer">
+        <ul class="hotels__pagination">
+          <li class="hotels__pagination-item hotels__pagination-item_current">
+            <a href="#" class="hotels__paginations-link hotels__paginations-link_current">1</a>
+          </li>
+          <li class="hotels__pagination-item">
+            <a href="#" class="hotels__paginations-link">2</a>
+          </li>
+          <li class="hotels__pagination-item">
+            <a href="#" class="hotels__paginations-link">3</a>
+          </li>
+          <li class="hotels__pagination-item">
+            <a href="#" class="hotels__paginations-link">4</a>
+          </li>
+          <li class="hotels__pagination-item">
+            <a href="#" class="hotels__paginations-link">...</a>
+          </li>
+          <li class="hotels__pagination-item">
+            <a href="#" class="hotels__paginations-link">10</a>
+          </li>
+        </ul>
+        <p class="hotels__pagination-title">Гостиниц на странице:</p>
+        <select class="hotels__pagination-select" aria-label="Количество гостиниц на странице">
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </footer>
     </section>
   </main>
   <section class="subscription subscription__hotels">
@@ -236,7 +243,7 @@
       Только полезная информация и никакого спама, честное бойскаутское!
     </p>
     <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
-      <input class="subscription__form-input type=" email" name="subscription-email" placeholder="Ваш e-mail">
+      <input class="subscription__form-input" type="email" name="subscription-email" placeholder="Ваш e-mail">
       <button type="submit" class="button button_subscribe button_info">
         Подписаться
       </button>
@@ -247,16 +254,17 @@
       <h2 class="visually-hidden">Ссылки на социальные сети</h2>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__vk" href="#">
+          <a href="#" class="social__link social__vk">
             <img src="./images/icons/vk-social.svg" alt="иконка вконтакте">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__telegram" href="#">
+          <a href="#" class="social__link">
             <img src="./images/icons/tg-social.svg" alt="иконка телеграм">
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__youtube" href="#">
+          <a href="#" class="social__link social__youtube">
             <img src="./images/icons/youtube-social.svg" alt="иконка youtube">
           </a>
         </li>

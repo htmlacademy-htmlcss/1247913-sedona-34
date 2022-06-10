@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<body>
+<body class="container">
   <header class="header">
     <a class="header__logo-link"><img class="header__logo" src="./images/sedona-logo.svg" width="139" height="70"
         alt="Логотип City of Sedona"></a>
@@ -23,7 +23,7 @@
           <a href="hotels.html" class="header__nav-link">Гостинницы</a>
         </li>
       </ul>
-      <ul class="header__nav-list header__nav-item_service">
+      <ul class="header__nav-list header__nav-service">
         <li class="header__nav-item">
           <a href="#" class="header__nav-link"><span class="visually-hidden">Поиск по сайту</span></a>
         </li>
@@ -49,7 +49,7 @@
       <ol class="advantages__list">
         <li class="advantages__item">
           <div class="advantages__card advantages__card_darkblue">
-            <h3 class="advantages__card-title">
+            <h3 class="advantages__card-title advantages__card-title_darkblue">
               Настоящий городок
             </h3>
             <p class="advantages__card-number">№1</p>
@@ -91,7 +91,7 @@
         <li class="advantages__item">
           <img class="advantages__card-img" src="./images/photo-2.jpg" alt="Фотография гор - мост дьявола">
           <div class="advantages__card advantages__card_darkblue">
-            <h3 class="advantages__card-title">
+            <h3 class="advantages__card-title advantages__card-title_darkblue">
               Там есть мост дьявола
             </h3>
             <p class="advantages__card-number">№2</p>
@@ -105,7 +105,7 @@
             Небольшая площадь
           </h3>
           <p class="advantages__card-number">№3</p>
-          <p class="advantages__card-descr advantages__card-descr">
+          <p class="advantages__card-descr">
             Все достопримечательности находятся очень близко
           </p>
         </li>
@@ -114,7 +114,7 @@
             Красивая дорога
           </h3>
           <p class="advantages__card-number">№4</p>
-          <p class="advantages__card-descr advantages__card-descr">
+          <p class="advantages__card-descr">
             Ехать в Седону из Лас-Вегаса совсем не скучно!
           </p>
         </li>
@@ -123,7 +123,7 @@
             Мало туристов
           </h3>
           <p class="advantages__card-number">№5</p>
-          <p class="advantages__card-descr advantages__card-descr">
+          <p class="advantages__card-descr">
             Большинство едет в Гранд Каньон и толпится там
           </p>
         </li>
@@ -135,7 +135,7 @@
         Укажите предполагаемые даты поездки,и мы покажем вам лучшие
         предложения гостиниц в Седоне
       </p>
-      <a href="#" class="button button_search button_detail">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+      <a href="#" class="button button_search button_detail">Поиск гостиницы в седоне</a>
     </section>
     <section class="subscription">
       <h2 class="subscription__title">Подпишитесь на рассылку</h2>
@@ -143,28 +143,30 @@
         Только полезная информация и никакого спама, честное бойскаутское!
       </p>
       <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
-        <input class="subscription__form-input type=" email" name="subscription-email" placeholder="Ваш e-mail">
+        <input class="subscription__form-input" type="email" name="subscription-email" placeholder="Ваш e-mail">
         <button type="submit" class="button button_subscribe button_info">
           Подписаться
         </button>
       </form>
     </section>
+
   </main>
   <footer class="footer">
     <section class="social">
       <h2 class="visually-hidden">Ссылки на социальные сети</h2>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__vk" href="#">
+          <a href="#" class="social__link social__vk">
             <img src="./images/icons/vk-social.svg" alt="иконка вконтакте">
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__telegram" href="#">
+          <a href="#" class="social__link">
             <img src="./images/icons/tg-social.svg" alt="иконка телеграм">
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__youtube" href="#">
+          <a href="#" class="social__link social__youtube">
             <img src="./images/icons/youtube-social.svg" alt="иконка youtube">
           </a>
         </li>
