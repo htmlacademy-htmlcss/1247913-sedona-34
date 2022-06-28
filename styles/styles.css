@@ -15,16 +15,19 @@
   font-display: swap;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 html {
   height: 100%;
-  background-color: #e5e5e5;
 }
 
 body {
+  height: inherit;
+  background-color: #e5e5e5;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -36,6 +39,12 @@ body {
 .container {
   margin: 0 auto;
   width: 1200px;
+}
+
+.container-sedona {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: #ffffff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
@@ -193,7 +202,7 @@ body {
   margin-bottom: 90px;
 }
 
-.advantages__list {
+.advantages__list, .advantages__item, .advantages__card-features {
   margin: 0;
   padding: 0;
   display: flex;
@@ -201,14 +210,9 @@ body {
   list-style-type: none;
 }
 
-.advantages__item {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .advantages__card {
   width: 400px;
-  height: 384px;
+  min-height: 384px;
   list-style-type: none;
 }
 
@@ -226,8 +230,32 @@ body {
 }
 
 .advantages__card-wrapper {
-  width: 230px;
+  max-width: 230px;
   margin: 0 auto;
+}
+
+.advantages__card-icon {
+  margin: 0 auto;
+  margin-top: 81px;
+  margin-bottom: 30px;
+}
+
+.advantages__card-icon_house {
+  background: url("../images/icons/housing.svg") center center no-repeat;
+  width: 75px;
+  height: 76px;
+}
+
+.advantages__card-icon_burger {
+  width: 74px;
+  height: 76px;
+  background: url("../images/icons/food.svg") center center no-repeat;
+}
+
+.advantages__card-icon_present {
+  width: 64px;
+  height: 76px;
+  background: url("../images/icons/souvenirs.svg") center center no-repeat;
 }
 
 .advantages__card-title {
@@ -236,12 +264,16 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: inherit;
-  margin-top: 103px;
+  margin: 0;
   margin-bottom: 30px;
 }
 
-.advantages__card-title_darkblue {
+.advantages__card-title_main {
   margin-top: 92px;
+}
+
+.advantages__card-title_secondary {
+  margin-top: 103px;
 }
 
 .advantages__card-descr {
@@ -263,6 +295,10 @@ body {
 
 .advantages__card-number::after {
   content: " —";
+}
+
+.advantages__card-img {
+  display: block;
 }
 
 .search {
@@ -407,6 +443,7 @@ body {
   background-image: url("../images/decorative/filter-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  flex-grow: 1;
 }
 
 .hotels__header {
@@ -542,9 +579,9 @@ body {
 }
 
 .hotels__founded-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 18px;
   margin: 0;
   padding: 0;
   padding-bottom: 86px;
@@ -558,9 +595,23 @@ body {
   padding: 20px;
 }
 
+.hotels__founded-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  width: 300px;
+}
+
+.hotels__founded-card-img {
+  grid-column: 1 / -1;
+}
+
 .hotels__founded-card-title {
+  grid-column: 1 / -1;
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  max-width: 300px;
 }
 
 .hotels__founded-card-details {
@@ -573,29 +624,12 @@ body {
 }
 
 .hotels__founded-card-type, .hotels__founded-card-price {
-  display: block;
-  width: 140px;
-}
-
-.hotels__founded-card-type {
-  margin-right: 20px;
-}
-
-.hotels__founded-card-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 16px;
-  column-gap: 20px;
-}
-
-.hotels__founded-card-buttons * {
-  display: block;
-  width: 140px;
-  box-sizing: border-box;
+  margin: 0;
+  max-width: 140px;
+  overflow-wrap: break-word;
 }
 
 .hotels__founded-card-rating {
-  display: inline-block;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
