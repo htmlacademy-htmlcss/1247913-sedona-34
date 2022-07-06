@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <title>HTML Academy: Седона - Гостиницы Седоны</title>
   <link rel="stylesheet" href="./styles/styles.css" />
+  <script src="./js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -62,36 +63,88 @@
             Список фильтров для сортировки гостинниц
           </h2>
           <form class="hotels__options-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="hotels__options-form-group">
+            <fieldset class="hotels__options-form-group hotels__options-form-group_infra">
               <legend class="hotels__options-form-title">Инфраструктура</legend>
-              <label class="hotels__options-form-chbx">
-                <input type="checkbox" class="hotels__options-form-input" name="pool" />
-                Бассейн
-              </label>
-              <label class="hotels__options-form-chbx">
-                <input type="checkbox" class="hotels__options-form-input" name="parking" />
-                Парковка
-              </label>
-              <label class="hotels__options-form-chbx">
-                <input type="checkbox" class="hotels__options-form-input" name="wi-fi" />
-                Wi-Fi
-              </label>
+              <ul class="hotels__options-form-list">
+                <li class="hotels__options-form-item">
+                  <label class="hotels__options-form-chbx">
+                    <input class="visually-hidden hotels__options-form-input" type="checkbox" name="pool" />
+                    <span class="hotels__options-form-input-mark"></span>
+                    <span class="hotels__options-form-input-label">Бассейн</span>                  </label>
+                </li>
+                <li class="hotels__options-form-item">
+                  <label class="hotels__options-form-chbx">
+                    <input class="visually-hidden hotels__options-form-input" type="checkbox" name="parking" />
+                    <span class="hotels__options-form-input-mark"></span>
+                    <span class="hotels__options-form-input-label">Парковка</span>
+                  </label>
+                </li>
+                <li class="hotels__options-form-item">
+                  <label class="hotels__options-form-chbx">
+                    <input class="visually-hidden hotels__options-form-input" type="checkbox" name="wi-fi" />
+                    <span class="hotels__options-form-input-mark"></span>
+                    <span class="hotels__options-form-input-label">Wi-Fi</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset class="hotels__options-form-group">
+            <fieldset class="hotels__options-form-group hotels__options-form-group_accomodation">
               <legend class="hotels__options-form-title">Тип жилья:</legend>
-              <label class="hotels__options-form-chbx">
-                <input type="radio" class="hotels__options-form-input" name="accommodation" value="hotel" checked />
-                Гостиница
-              </label>
-              <label class="hotels__options-form-chbx">
-                <input type="radio" class="hotels__options-form-input" name="accommodation" value="motel" />
-                Мотель
-              </label>
-              <label class="hotels__options-form-chbx">
-                <input type="radio" class="hotels__options-form-input" name="accommodation" value="apartment" />
-                Апартаменты
-              </label>
+              <ul class="hotels__options-form-list">
+                <li class="hotels__options-form-item">
+                  <label class="hotels__options-form-radio">
+                    <input class="visually-hidden hotels__options-form-input-radio" type="radio" name="accommodation" value="hotel" checked />
+
+                    <span class="hotels__options-form-input-mark-radio"></span>
+                    <span class="hotels__options-form-input-label">Гостиница</span>
+                  </label>
+                </li>
+                <li class="hotels__options-form-item">
+                  <label class="hotels__options-form-radio">
+                    <input class="visually-hidden hotels__options-form-input-radio" type="radio" name="accommodation" value="hotel" checked />
+
+                    <span class="hotels__options-form-input-mark-radio"></span>
+                    <span class="hotels__options-form-input-label">Мотель</span>
+                  </label>
+                </li>
+                <li class="hotels__options-form-item">
+                  <label class="hotels__options-form-radio">
+                    <input class="visually-hidden hotels__options-form-input-radio" type="radio" name="accommodation" value="hotel" checked />
+
+                    <span class="hotels__options-form-input-mark-radio"></span>
+                    <span class="hotels__options-form-input-label">Апартаменты</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
+            <fieldset class="hotels__options-form-group hotels__options-form-group_price">
+              <legend class="hotels__options-form-title">Стоимость, ₽:</legend>
+              <div class="hotels__options-form-range-wrapper-inputs">
+                <label class="hotels__options-form-range-label">
+                  <input class="hotels__options-form-range-input" type="number" value="0" name="min-price">
+                  <span class="hotels__options-form-range-label-title">от</span>
+                </label>
+                <label class="hotels__options-form-range-label">
+                  <input class="hotels__options-form-range-input" type="number" value="0" name="min-price">
+                  <span class="hotels__options-form-range-label-title">до</span>
+
+                </label>
+              </div>
+
+              <div class="hotels__options-form-range">
+
+                    <div class="hotels__options-form-range-scale">
+                      <div class="hotels__options-form-range-bar" style="left: 0px; width: 226px">
+                        <button type="button" class="hotels__options-form-range-toggle hotels__options-form-range-toggle-min"></button>
+                        <button type="button" class="hotels__options-form-range-toggle hotels__options-form-range-toggle-max"></button>
+                      </div>
+                    </div>
+
+
+              </div>
+
+            </fieldset>
+
             <div class="hotels__options-form-buttons-wrapper">
               <button type="submit" class="button button_info hotels__options-form-apply">
                 Применить
