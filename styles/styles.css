@@ -688,11 +688,11 @@ body {
   color: #ffffff;
 }
 
-.hotels__options-breadcrumbs>*:not(:last-child) {
+.hotels__options-breadcrumbs > *:not(:last-child) {
   position: relative;
 }
 
-.hotels__options-breadcrumbs>*:not(:last-child)::after {
+.hotels__options-breadcrumbs > *:not(:last-child)::after {
   position: absolute;
   content: "";
   top: 0px;
@@ -850,7 +850,7 @@ body {
   position: relative;
 }
 
-.hotels__options-form-range-label:last-child>input {
+.hotels__options-form-range-label:last-child > input {
   margin-left: -2px;
   border-radius: 0 4px 4px 0;
 }
@@ -1156,6 +1156,38 @@ body {
   margin: 0;
   max-width: 140px;
   overflow-wrap: break-word;
+}
+
+.hotels__founded-card-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../images/icons/star.svg");
+  background-repeat: space repeat;
+  height: 17px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+.hotels__founded-card-stars_4 {
+  width: 88px;
+}
+
+.hotels__founded-card-stars_3 {
+  width: 66px;
+}
+
+.hotels__founded-card-stars_2 {
+  width: 42px;
+}
+
+.hotels__founded-card-stars_1 {
+  width: 22px;
+}
+
+.hotels__founded-card-stars_0 {
+  width: 0px;
 }
 
 .hotels__founded-card-rating {
