@@ -20,7 +20,7 @@
             <a class="header__nav-link" href="#">О Седоне</a>
           </li>
           <li>
-            <a class="header__nav-link  header__nav-link_current">Гостинницы</a>
+            <a class="header__nav-link  header__nav-link_current">Гостиницы</a>
           </li>
         </ul>
         <ul class="header__nav-list header__nav-service">
@@ -122,13 +122,13 @@
                   <span class="hotels__options-form-range-label-title">от</span>
                 </label>
                 <label class="hotels__options-form-range-label">
-                  <input class="hotels__options-form-range-input" type="number" value="0" name="min-price">
+                  <input class="hotels__options-form-range-input" type="number" value="9000" name="max-price">
                   <span class="hotels__options-form-range-label-title">до</span>
                 </label>
               </div>
               <div class="hotels__options-form-range">
                     <div class="hotels__options-form-range-scale">
-                      <div class="hotels__options-form-range-bar" style="left: 0px; width: 226px">
+                      <div class="hotels__options-form-range-bar" style="left: 6px; width: 226px">
                         <button class="hotels__options-form-range-toggle hotels__options-form-range-toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену на стоимость проживания</span>
                         </button>
@@ -293,7 +293,8 @@
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
-          <input class="subscription__form-input" type="email" name="subscription-email"
+          <label class="visually-hidden" for="subscription">Email</label>
+          <input class="subscription__form-input" type="email" id="subscription" name="subscription-email"
             placeholder="Ваш e-mail" required>
             <button class="button button_subscribe button_info" type="submit">
               Подписаться
